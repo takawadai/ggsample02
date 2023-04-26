@@ -144,7 +144,7 @@ static GLuint createObject(GLuint vertices, const GLfloat(*position)[3], GLuint 
   GLuint vbo;
   glGenBuffers(1, &vbo);
   glBindBuffer(GL_ARRAY_BUFFER, vbo);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat[2]) * vertices, position, GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat[3]) * vertices, position, GL_STATIC_DRAW);
 
   // インデックスバッファオブジェクト
   GLuint ibo;
@@ -207,10 +207,10 @@ int GgApp::main(int argc, const char* const* argv)
     { -0.9f, 0.9f, 0.9f },
     { 0.9f, 0.9f, 0.9f },
     { 0.9f, 0.9f, -0.9f},
-    { 0.9f, -0.9f, -0.9f },
-    { 0.9f, -0.9f, 0.9f },
-    { -0.9f, -0.9f, 0.9f },
-    { -0.9f, -0.9f, -0.9f },
+    //{ 0.9f, -0.9f, -0.9f },
+    //{ 0.9f, -0.9f, 0.9f },
+    //{ -0.9f, -0.9f, 0.9f },
+    //{ -0.9f, -0.9f, -0.9f },
    
   };
 
@@ -220,12 +220,12 @@ int GgApp::main(int argc, const char* const* argv)
   // 頂点インデックス
   static const GLuint index[]
   {
-    0, 1, 2, 3,
-    7, 6, 5, 4,
-    0, 1, 6, 7,
-    3, 2, 5, 4,
-    0, 3, 4, 7,
-    1, 2, 6, 5
+    0, 1, 2, 3
+   // 7, 6, 5, 4
+    //0, 1, 6, 7,
+    //3, 2, 5, 4,
+   // 0, 3, 4, 7,
+   // 1, 2, 6, 5
   };
 
   // 稜線数
