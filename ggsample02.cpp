@@ -221,11 +221,11 @@ int GgApp::main(int argc, const char* const* argv)
   static const GLuint index[]
   {
     0, 1, 2, 3,
-    7, 6, 5, 4,
     0, 1, 6, 7,
-    3, 2, 5, 4,
-    0, 3, 4, 7,
-    1, 2, 6, 5
+    5, 4, 7, 6,
+    5, 4, 3, 2,
+    4, 3, 0, 7,
+    1, 2, 5, 6
   };
 
   // 稜線数
