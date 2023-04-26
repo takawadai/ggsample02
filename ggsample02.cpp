@@ -220,7 +220,12 @@ int GgApp::main(int argc, const char* const* argv)
   // 頂点インデックス
   static const GLuint index[]
   {
-    0, 2, 1, 3
+    0, 1, 2, 3,
+    7, 6, 5, 4,
+    0, 1, 6, 7,
+    3, 2, 5, 4,
+    0, 3, 4, 7,
+    1, 2, 6, 5
   };
 
   // 稜線数
